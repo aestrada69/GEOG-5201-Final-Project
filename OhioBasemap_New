@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ohio Basemap</title>
+
+	<!-- styleSheets -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+	<link rel="stylesheet" href="ohioBasemap.css" />
+    <style>
+        #mapId {
+            width: 1875px;
+            height: 950px;
+        }
+    </style>
+
+<body>
+    <div id="map"></div>
+
+    <script> 
+
+    var map = L.map('mapId').setView([40.0001, -82.9], 12);
+    
+    var OpenTopoMap = L.tileLayer('https://api.mapbox.com/styles/v1/aeestrada57/cjci6dv308w0a2sqji8dtmsu9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWVlc3RyYWRhNTciLCJhIjoiY2pjaTY4d2drMnVkaDJ3bnRzaGl4ejA3eSJ9.4SU3lQA6mtWP50zb53Jggw', {
+        maxZoom: 17,
+        attribution: '&copy; <a href=”https://www.mapbox.com/about/maps/”>Mapbox</a> &copy; <a href=”http://www.openstreetmap.org/copyright”>OpenStreetMap</a>'
+    });
+
+    OpenTopoMap.addTo(map);
+
+    </script>
+</body>
+
+</html>
