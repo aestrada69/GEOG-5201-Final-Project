@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ohio Basemap</title>
+    <title>Ohio's Abandoned Mines and Demographics</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leadlet@1.2.0/dist/leaflet-slider.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet-slider.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.dialog.css" />
     <link rel="stylesheet" href="pcp.css">
 
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leadlet@1.2.0/dist/leaflet-slider.js"></script>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet-slider.js"></script>
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.dialog.js"></script>
     <script src="d3.js"></script>
   <style>
@@ -69,13 +69,13 @@
     var y = -82.9
       var map = L.map('mapId').setView([x,y], z);
                                                 
-    var OpenTopoMap = L.tileLayer('https://api.mapbox.com/styles/v1/aeestrada57/cjfwzledp1dzg2tmrveuyo4m4/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWVlc3RyYWRhNTciLCJhIjoiY2pjaTY4d2drMnVkaDJ3bnRzaGl4ejA3eSJ9.4SU3lQA6mtWP50zb53Jggw', {
+    var OpenTopoMap = L.tileLayer('https://api.mapbox.com/styles/v1/aeestrada57/cjfwzledp1dzg2tmrveuyo4m4/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWVlc3RyYWRhNTciLCJhIjoiY2pjaTY4d2drMnVkaDJ3bnRzaGl4ejA3eSJ9.4SU3lQA6mtWP50zb53Jggw', {
     maxZoom: 18,
     attribution: '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   });
   
   OpenTopoMap.addTo(map);
   </script>
-  
+
 </body>
 </html>
