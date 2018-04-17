@@ -1,8 +1,11 @@
-
+<!DOCTYPE html>
 <html>
+
 <head>
-        <title>Ohio Basemap</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <meta charset="UTF-8">
+    <title>Ohio Basemap</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
   <style>
         #mapId {
@@ -11,18 +14,51 @@
         }
   </style>
 </head>
-<body>
 
-  <div id="mapId"></div>
+<body>
+    <div id="AppDescription">
+        <b> Instructions:</b>
+        <br>
+        "Hover over a county to read its median income information, as well as the number of closed and active mines. 
+        Click and drag the slider to change the county-by-county display of median income change in the study period. 
+        Browse the parallel coordinate plot to the right to see an Ohio county's population, median household income, 
+        and poverty rate for the year 20??. Click and drag along any of the vertical axes to and highlight 
+        counties which fit your selection and filter out those which do not. Click an area not highlighted to clear you
+        filter."
+    </div>
+        
+    <div id="mapID" style="width: 850px; height: 850px; position: relative;" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim" tabindex="0">
+        <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
+            <div class="leaflet-pane leaflet-tile-pane"></div>
+            <div class="leaflet-pane leaflet-shadow-pane"></div>
+            <!-- below div element needs work -->
+            <div class="leaflet-pane leaflet-overlay-pane"></div>
+            <div class="leaflet-pane leaflet-marker-pane"></div>
+            <div class="leaflet-pane leaflet-tooltip-pane"></div>
+            <div class="leaflet-pane leaflet-popup-pane"></div>
+            <!-- this div element needs translation coords -->
+            <div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(0px, 0px, 0px);"></div>
+         
+        </div>
+    </div>
+        <div id="credits" style="width:800px; top:80px; top:850px; position:absolute;">
+            <br>
+            "Project by: Alex Estrada and Jerry Cui"
+            <br>
+            "The Ohio State University: GEOG 5201 - Professor Morteza Karimzadeh"
+            <br>
+            "Data Sources: Ohio Department of Natural Resources - Division of Mineral Resources, Geologic Records; US Census Bureau" 
+            <br>
+            <a href="https://www.youtube.com/" target="_blank">Click for a video tutorial on this application </a>
+        </div>
+         
 
   <script>
   
     var z = 12
     var x = 40.0001
     var y = -82.9
-
       var map = L.map('mapId').setView([x,y], z);
-
                                                 
     var OpenTopoMap = L.tileLayer('https://api.mapbox.com/styles/v1/aeestrada57/cjfwzledp1dzg2tmrveuyo4m4/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWVlc3RyYWRhNTciLCJhIjoiY2pjaTY4d2drMnVkaDJ3bnRzaGl4ejA3eSJ9.4SU3lQA6mtWP50zb53Jggw', {
     maxZoom: 18,
@@ -30,7 +66,7 @@
   });
   
   OpenTopoMap.addTo(map);
-
   </script>
+  
 </body>
 </html>
