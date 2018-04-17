@@ -3,25 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ohio's Abandoned Mines and Demographics</title>
+    <title>Ohio's Abandoned Mines and Demographic Change</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet-slider.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.dialog.css" />
-    <link rel="stylesheet" href="pcp.css">
 
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet-slider.js"></script>
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.dialog.js"></script>
-    <script src="d3.js"></script>
+
   <style>
-        #mapId {
-            width: 1875px;
-            height: 950px;
+        #mapID {
+            width: 1500px;
+            height: 800px;
         }
   </style>
+
+  <!-- Parallel Coordinate Plot -->
+
+
+
 </head>
 
 <body>
@@ -52,6 +52,10 @@
     </div>
         <div id="credits" style="width:800px; top:80px; top:850px; position:absolute;">
             <br>
+            <br>
+            <br>
+            <br>
+            <br>
             "Project by: Alex Estrada and Jerry Cui"
             <br>
             "The Ohio State University: GEOG 5201 - Professor Morteza Karimzadeh"
@@ -67,7 +71,7 @@
     var z = 12
     var x = 40.0001
     var y = -82.9
-      var map = L.map('mapId').setView([x,y], z);
+      var map = L.map('mapID').setView([x,y], z);
                                                 
     var OpenTopoMap = L.tileLayer('https://api.mapbox.com/styles/v1/aeestrada57/cjfwzledp1dzg2tmrveuyo4m4/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWVlc3RyYWRhNTciLCJhIjoiY2pjaTY4d2drMnVkaDJ3bnRzaGl4ejA3eSJ9.4SU3lQA6mtWP50zb53Jggw', {
     maxZoom: 18,
