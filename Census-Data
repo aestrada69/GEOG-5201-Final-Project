@@ -1,4 +1,4 @@
-var CountyCensus = {var CountyCensus = {
+var CountyCensus = {
   "type": "FeatureCollection",
   "name": "ohio",
  "features": [ 
